@@ -1,5 +1,6 @@
 -- Me Do — database schema + seed data
--- Run: mysql -h 127.0.0.1 -P 3307 -u root -p1234 < db/schema.sql
+-- Run with your own credentials, e.g.:
+--   mysql -h <DB_HOST> -P <DB_PORT> -u <DB_USER> -p < db/schema.sql
 
 CREATE DATABASE IF NOT EXISTS medo
   CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
