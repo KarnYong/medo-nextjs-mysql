@@ -39,7 +39,7 @@ function unsign(token: string | undefined): number | null {
 export async function createSession(userId: number) {
   (await cookies()).set(COOKIE, sign(userId), {
     httpOnly: true,
-    secure: process.env.NODE_ENV === "production",
+    // ponytail: no `secure` flag so plain-HTTP (bare IP) works too; add it back if this ever serves sensitive data
     sameSite: "lax",
     maxAge: 7 * 24 * 60 * 60,
     path: "/",
